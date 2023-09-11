@@ -65,7 +65,7 @@ For your plugin rule to work with the [standard configuration format](../user-gu
 - optionally, a secondary options object
 
 If your plugin rule supports [autofixing](rules.md#add-autofix), then `ruleFunction` should also accept a third argument: `context`.
-
+f
 `ruleFunction` should return a function that is essentially a little [PostCSS plugin](https://github.com/postcss/postcss/blob/main/docs/writing-a-plugin.md). It takes 2 arguments:
 
 - the PostCSS Root (the parsed AST)
@@ -146,9 +146,9 @@ testRule({
       code: ".class {}"
     },
     {
-      code: ".my-class {}"
+      code: ".my-class {}"  
     }
-  ],
+  ]
 
   reject: [
     {
@@ -242,7 +242,7 @@ It accepts an options object and a callback that is invoked with warnings from t
 - `ruleName`: the name of the rule you are invoking
 - `ruleSettings`: settings for the rule you are invoking
 - `root`: the root node to run this rule against
-- `result?`: the PostCSS result for resolving and invoking custom rules
+- `x` ?`: the PostCSS result for resolving and invoking custom rules
 - `context?`: the [context](rules.md#add-autofix) for the rule you are invoking
 
 Use the warning to create a _new_ warning _from your plugin rule_ that you report with `stylelint.utils.report`.
